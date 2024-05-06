@@ -1,0 +1,111 @@
+@import "./mixin.scss";
+
+:root {
+ font-size: 16px;
+}
+
+* {
+ box-sizing: border-box;
+}
+
+ul {
+ margin: 0;
+ padding: 0;
+ list-style-type: none;
+}
+
+html,
+body,
+#root {
+ font-family: "Rubik", sans-serif;
+ font-optical-sizing: auto;
+ font-weight: 400;
+ font-style: normal;
+ height: 100%;
+ background-color: $bg-light-color;
+}
+
+button {
+ cursor: pointer;
+ font-family: "Rubik", sans-serif;
+ border: none;
+ transition: 200ms ease-in-out;
+}
+
+.button {
+ position: relative;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ text-decoration: none;
+ z-index: 1;
+ font-size: 1.375rem;
+ width: 180px;
+ height: 60px;
+ border-radius: 1.25rem;
+ color: $white;
+ background-color: $btn-color;
+ &:active {
+  transform: translateY(10px);
+ }
+}
+
+.wrapper {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: inherit;
+ padding: 0 15px;
+ 
+ &::before {
+  z-index: 0;
+  content: "";
+  position: fixed;
+  top: 0;
+  width: 150%;
+  height: 864px;
+  border-radius: 50%;
+  background-color: $bg-color;
+  transform: translate(0, -50%);
+ }
+
+ .inner {
+  position: relative;
+  z-index: 1;
+ }
+
+ .bodyCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ }
+
+ .body {
+  padding: 3rem;
+  min-width: 800px;
+  max-width: 80%;
+  border-radius: 40px;
+  background-color: $white;
+ }
+}
+
+.btnWrap {
+ margin-top: auto;
+ position: relative;
+}
+
+.shadow {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 180px;
+ height: 60px;
+ border-radius: 1.25rem;
+ transform: translateY(10px);
+ background-color: $btn-shadow;
+}
+
+body {
+ margin: 0;
+}

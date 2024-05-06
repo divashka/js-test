@@ -1,0 +1,44 @@
+@import "../../mixin.scss";
+
+.greet {
+ display: flex;
+ align-items: center;
+ column-gap: 1rem;
+ font-size: 2rem;
+ margin-bottom: 2rem;
+ &::after {
+  display: block;
+  content: "";
+  width: 28px;
+  height: 28px;
+  background-image: url("/images/favorite.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+ }
+}
+
+.subtitle {
+ display: flex;
+ align-items: center;
+ column-gap: 1.25rem;
+ color: $grey-text;
+ font-size: 1rem;
+ &::before,
+ &::after {
+  content: "";
+  height: 1px;
+  width: 3rem;
+  background-color: $grey-text;
+ }
+}
+
+.text {
+ text-align: center;
+ font-size: 1.25rem;
+ max-width: 700px;
+ color: $text-color;
+}
+
+.shadow {
+ margin-top: auto;
+}
